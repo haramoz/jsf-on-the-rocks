@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<head>
+    <title>JSF PrimeFaces Example</title>
+</head>
+<body>
+<h1>Hello, World Arka!</h1>
+
+<p:button value="Click Me" onclick="PF('dialog').show();" />
+
+<p:dialog widgetVar="dialog" header="Dialog" modal="true">
+    <h:outputText value="This is a PrimeFaces dialog." />
+</p:dialog>
+
+<h:form>
+    <p:inputText value="#{helloBean.name}" />
+    <p:commandButton value="Submit" action="#{helloBean.submit}" />
+</h:form>
+</body>
+</html>
